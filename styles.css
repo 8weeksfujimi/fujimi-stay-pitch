@@ -778,3 +778,113 @@ a:focus {
     outline: 1px solid var(--primary-black);
     outline-offset: 2px;
 }
+
+/* Advanced Analysis Tool - Streamlit Embed */
+.advanced-analysis {
+    margin-top: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--off-white);
+    border-radius: 8px;
+    border: 1px solid var(--lighter-gray);
+}
+
+.advanced-analysis h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--primary-black);
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.analysis-description {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--secondary-gray);
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+.analysis-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.feature-item {
+    background: var(--pure-white);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--primary-gray);
+    border: 1px solid var(--lighter-gray);
+    white-space: nowrap;
+}
+
+.streamlit-embed {
+    margin: var(--space-md) 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-elevated);
+    border: 1px solid var(--lighter-gray);
+}
+
+.streamlit-embed iframe {
+    display: block;
+    border: none;
+    background: var(--pure-white);
+}
+
+.analysis-note {
+    background: var(--pure-white);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 6px;
+    border-left: 3px solid var(--primary-black);
+    margin-top: var(--space-md);
+}
+
+.analysis-note p {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+    margin: 0;
+}
+
+/* Responsive adjustments for embedded tool */
+@media (max-width: 768px) {
+    .advanced-analysis {
+        margin: var(--space-md) -var(--space-sm);
+        padding: var(--space-md) var(--space-sm);
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+    
+    .streamlit-embed iframe {
+        height: 600px;
+    }
+    
+    .analysis-features {
+        gap: var(--space-xs);
+    }
+    
+    .feature-item {
+        font-size: 0.8rem;
+        padding: 4px var(--space-xs);
+    }
+}
+
+@media (max-width: 480px) {
+    .streamlit-embed iframe {
+        height: 500px;
+    }
+    
+    .advanced-analysis h3 {
+        font-size: 1.4rem;
+    }
+    
+    .analysis-description {
+        font-size: 0.9rem;
+    }
+}
