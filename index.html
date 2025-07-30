@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>富士見町宿泊事業 - 地域と共に成長する新しい観光インフラ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ヒーローセクション -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">富士見町に新しい観光の風を</h1>
+            <p class="hero-subtitle">年間45万人の来訪者に、忘れられない滞在体験を</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="30">0</span>
+                    <span class="stat-label">物件数（5年後）</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="150">0</span>
+                    <span class="stat-label">収容人数</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="4">0</span>
+                    <span class="stat-label">億円の経済効果</span>
+                </div>
+            </div>
+            <a href="#business-model" class="cta-button">事業詳細を見る</a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- ナビゲーション -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">富士見町宿泊事業</div>
+            <ul class="nav-menu">
+                <li><a href="#business-model">事業モデル</a></li>
+                <li><a href="#financial">収支計画</a></li>
+                <li><a href="#timeline">展開計画</a></li>
+                <li><a href="#impact">社会的インパクト</a></li>
+                <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 事業モデルセクション -->
+    <section id="business-model" class="section">
+        <div class="container">
+            <h2 class="section-title">革新的な事業モデル</h2>
+            <p class="section-subtitle">中古物件とトレーラーハウスを活用した、サステナブルな宿泊事業</p>
+            
+            <div class="model-grid">
+                <div class="model-card" data-aos="fade-up">
+                    <div class="model-icon">🏠</div>
+                    <h3>自社所有物件（50%）</h3>
+                    <ul class="model-features">
+                        <li>中古物件を1,500万円以内で取得・改修</li>
+                        <li>トレーラーハウスで遊休地を活用</li>
+                        <li>年間売上300万円/物件</li>
+                        <li>営業利益率35%</li>
+                    </ul>
+                </div>
+                <div class="model-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="model-icon">🔑</div>
+                    <h3>賃貸物件（50%）</h3>
+                    <ul class="model-features">
+                        <li>月額8万円で優良物件を賃借</li>
+                        <li>初期投資を400万円に抑制</li>
+                        <li>投資回収期間4.2年</li>
+                        <li>機動的な事業展開</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="property-showcase">
+                <h3>物件タイプ別の特徴</h3>
+                <div class="property-types">
+                    <div class="property-type">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='20' fill='%23999'%3E古民家リノベーション%3C/text%3E%3C/svg%3E" alt="古民家">
+                        <h4>古民家リノベーション</h4>
+                        <p>地域の歴史を感じる空間で、特別な滞在体験を提供</p>
+                    </div>
+                    <div class="property-type">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23f0f0f0' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='20' fill='%23999'%3Eトレーラーハウス%3C/text%3E%3C/svg%3E" alt="トレーラーハウス">
+                        <h4>トレーラーハウス</h4>
+                        <p>自然に囲まれた環境で、グランピング体験を提供</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 財務計画セクション -->
+    <section id="financial" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">堅実な収支計画</h2>
+            <p class="section-subtitle">段階的な成長で、確実な収益を実現</p>
+            
+            <div class="financial-calculator">
+                <h3>投資シミュレーター</h3>
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label>物件数</label>
+                        <input type="range" id="property-count" min="1" max="30" value="10" step="1">
+                        <span id="property-count-display">10</span>物件
+                    </div>
+                    <div class="input-group">
+                        <label>稼働率</label>
+                        <input type="range" id="occupancy-rate" min="40" max="80" value="60" step="5">
+                        <span id="occupancy-rate-display">60</span>%
+                    </div>
+                </div>
+                
+                <div class="calculator-results">
+                    <div class="result-card">
+                        <h4>年間売上</h4>
+                        <p class="result-value" id="annual-revenue">3,000万円</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>年間営業利益</h4>
+                        <p class="result-value" id="annual-profit">1,005万円</p>
+                    </div>
+                    <div class="result-card">
+                        <h4>投資回収期間</h4>
+                        <p class="result-value" id="payback-period">9.5年</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="financial-charts">
+                <canvas id="growth-chart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- タイムラインセクション -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <h2 class="section-title">成長ロードマップ</h2>
+            <p class="section-subtitle">5年間で地域のリーディングカンパニーへ</p>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-year="2025-2026">
+                    <div class="timeline-content">
+                        <h3>第1フェーズ</h3>
+                        <p class="timeline-target">10物件（50名収容）</p>
+                        <ul>
+                            <li>初期3物件から10物件へ拡大</li>
+                            <li>運営体制の確立</li>
+                            <li>地域連携の基盤構築</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2027-2028">
+                    <div class="timeline-content">
+                        <h3>第2フェーズ</h3>
+                        <p class="timeline-target">20物件（100名収容）</p>
+                        <ul>
+                            <li>ブランド認知度の向上</li>
+                            <li>体験プログラムの充実</li>
+                            <li>収益基盤の安定化</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2029-">
+                    <div class="timeline-content">
+                        <h3>第3フェーズ</h3>
+                        <p class="timeline-target">30物件（150名収容）</p>
+                        <ul>
+                            <li>地域No.1の宿泊事業者へ</li>
+                            <li>新規事業への展開</li>
+                            <li>EXIT戦略の検討</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社会的インパクトセクション -->
+    <section id="impact" class="section section-impact">
+        <div class="container">
+            <h2 class="section-title">地域と共に成長する</h2>
+            <p class="section-subtitle">富士見町の持続可能な発展に貢献</p>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon">👥</div>
+                    <h3>雇用創出</h3>
+                    <p class="impact-number">30-50名</p>
+                    <p>地域の新たな雇用を創出</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">🏘️</div>
+                    <h3>空き家活用</h3>
+                    <p class="impact-number">15軒</p>
+                    <p>地域の空き家問題を解決</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">💰</div>
+                    <h3>経済効果</h3>
+                    <p class="impact-number">年間4億円</p>
+                    <p>地域経済への波及効果</p>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon">🌱</div>
+                    <h3>SDGs貢献</h3>
+                    <p class="impact-number">3つの目標</p>
+                    <p>持続可能な地域づくり</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- コンタクトセクション -->
+    <section id="contact" class="section section-contact">
+        <div class="container">
+            <h2 class="section-title">一緒に富士見町の未来を創りましょう</h2>
+            <p class="section-subtitle">投資・パートナーシップのご相談をお待ちしております</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>お問い合わせ</h3>
+                    <p>富士見町宿泊事業プロジェクト</p>
+                    <p>📍 長野県諏訪郡富士見町</p>
+                    <p>📧 contact@fujimi-stay.jp</p>
+                    <p>📱 0266-XX-XXXX</p>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="お名前" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="メールアドレス" required>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">お問い合わせ内容</option>
+                            <option value="investment">投資について</option>
+                            <option value="partnership">パートナーシップについて</option>
+                            <option value="property">物件提供について</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="メッセージ" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">送信する</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 富士見町宿泊事業プロジェクト. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
