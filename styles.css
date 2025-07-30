@@ -1376,46 +1376,45 @@ body {
 .pillar:nth-child(2) { color: var(--primary-black); }
 .pillar:nth-child(3) { color: var(--primary-black); }
 
-/* Untitled UI Icon Styles */
-.untitled-ui-icon {
-    font-size: 24px;
-    color: var(--primary-black);
+/* Lucide Icon Styles */
+.icon-inline {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px;
+    stroke-width: 2;
+}
+
+.icon-small {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
     vertical-align: middle;
     margin-right: 8px;
+    stroke-width: 2;
 }
 
-h3 .untitled-ui-icon,
-h4 .untitled-ui-icon {
-    font-size: 20px;
-    margin-right: 12px;
-}
-
-.pillar-icon .untitled-ui-icon,
-.step-icon .untitled-ui-icon,
-.model-icon .untitled-ui-icon,
-.impact-icon .untitled-ui-icon {
-    font-size: 48px;
+.icon-large {
+    width: 48px;
+    height: 48px;
     display: block;
     margin: 0 auto var(--space-md);
+    stroke-width: 1.5;
 }
 
-.feature-item .untitled-ui-icon {
-    font-size: 16px;
-    margin-right: 8px;
+.pillar-icon,
+.step-icon,
+.model-icon,
+.impact-icon {
+    text-align: center;
 }
 
-.advantage-item .untitled-ui-icon,
-.disadvantage-item .untitled-ui-icon {
-    font-size: 18px;
-    margin-right: 10px;
-    vertical-align: text-bottom;
-}
-
-.advantage-item .untitled-ui-icon {
+.advantage-item .icon-small {
     color: var(--primary-black);
 }
 
-.disadvantage-item .untitled-ui-icon {
+.disadvantage-item .icon-small {
     color: var(--tertiary-gray);
 }
 
