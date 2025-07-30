@@ -1,28 +1,29 @@
 /* 8weeks Fujimi Landscape - Minimalist Nature Philosophy Design */
 
 :root {
-    /* Natural Color Palette - inspired by Yatsugatake landscapes */
-    --primary-sage: #7c8471;
-    --primary-stone: #5a5950; 
-    --primary-sky: #c8d5d0;
-    --accent-mountain: #4a5d4b;
-    --accent-earth: #8b7355;
-    --accent-mist: #f4f6f4;
+    /* Monochrome Color Palette - Pure and Refined */
+    --primary-black: #000000;
+    --primary-gray: #333333;
+    --secondary-gray: #666666;
+    --light-gray: #999999;
+    --lighter-gray: #e5e5e5;
+    --pure-white: #ffffff;
+    --off-white: #fafafa;
     
     /* Typography */
     --font-display: 'Crimson Text', serif;
     --font-body: 'Noto Sans JP', sans-serif;
     
-    /* Spacing - based on natural proportions */
+    /* Spacing - Precise proportions */
     --space-xs: 0.5rem;
     --space-sm: 1rem;
     --space-md: 2rem;
     --space-lg: 4rem;
     --space-xl: 8rem;
     
-    /* Natural shadows */
-    --shadow-gentle: 0 2px 20px rgba(90, 89, 80, 0.08);
-    --shadow-lifted: 0 8px 40px rgba(90, 89, 80, 0.12);
+    /* Clean shadows */
+    --shadow-subtle: 0 2px 12px rgba(0, 0, 0, 0.05);
+    --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset and Foundation */
@@ -36,18 +37,15 @@ body {
     font-family: var(--font-body);
     font-weight: 300;
     line-height: 1.7;
-    color: var(--primary-stone);
-    background: var(--accent-mist);
+    color: var(--primary-gray);
+    background: var(--pure-white);
     overflow-x: hidden;
 }
 
 /* Hero Section - Mountain Meditation */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, 
-        var(--primary-sky) 0%, 
-        var(--accent-mist) 50%,
-        #e8ebe8 100%);
+    background: var(--pure-white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,9 +60,8 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path d="M0,300 Q300,100 600,250 T1200,200 L1200,600 L0,600 Z" fill="%23c8d5d0" opacity="0.3"/><path d="M0,400 Q400,200 800,350 T1200,300 L1200,600 L0,600 Z" fill="%237c8471" opacity="0.1"/></svg>') no-repeat bottom center;
-    background-size: 100% auto;
-    opacity: 0.6;
+    background: linear-gradient(180deg, transparent 0%, var(--off-white) 100%);
+    opacity: 0.3;
 }
 
 .hero-content {
@@ -78,7 +75,7 @@ body {
     font-family: var(--font-display);
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--primary-sage);
+    color: var(--light-gray);
     letter-spacing: 0.15em;
     margin-bottom: var(--space-sm);
     opacity: 0;
@@ -89,7 +86,7 @@ body {
     font-family: var(--font-display);
     font-size: clamp(3rem, 8vw, 5rem);
     font-weight: 600;
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     margin-bottom: var(--space-sm);
     letter-spacing: -0.02em;
     opacity: 0;
@@ -100,7 +97,7 @@ body {
     font-family: var(--font-display);
     font-size: 1.4rem;
     font-style: italic;
-    color: var(--primary-sage);
+    color: var(--secondary-gray);
     margin-bottom: var(--space-lg);
     font-weight: 400;
     opacity: 0;
@@ -116,7 +113,7 @@ body {
 .philosophy-text {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--primary-stone);
+    color: var(--primary-gray);
     font-weight: 300;
 }
 
@@ -138,13 +135,13 @@ body {
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 600;
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     line-height: 1;
 }
 
 .stat-label {
     font-size: 0.9rem;
-    color: var(--primary-sage);
+    color: var(--light-gray);
     font-weight: 300;
     margin-top: var(--space-xs);
     display: block;
@@ -154,9 +151,9 @@ body {
     display: inline-block;
     padding: var(--space-sm) var(--space-lg);
     background: transparent;
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     text-decoration: none;
-    border: 2px solid var(--accent-mountain);
+    border: 1px solid var(--primary-black);
     border-radius: 0;
     font-weight: 400;
     font-size: 0.95rem;
@@ -175,7 +172,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: var(--accent-mountain);
+    background: var(--primary-black);
     transition: left 0.4s ease;
     z-index: -1;
 }
@@ -185,7 +182,7 @@ body {
 }
 
 .cta-button:hover {
-    color: var(--accent-mist);
+    color: var(--pure-white);
     transform: translateY(-2px);
 }
 
@@ -200,10 +197,10 @@ body {
 }
 
 .mouse {
-    width: 2px;
+    width: 1px;
     height: 40px;
-    background: var(--primary-sage);
-    border-radius: 1px;
+    background: var(--light-gray);
+    border-radius: 0;
     position: relative;
     animation: scrollPulse 3s infinite;
 }
@@ -213,9 +210,9 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(244, 246, 244, 0.95);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(124, 132, 113, 0.1);
+    border-bottom: 1px solid var(--lighter-gray);
     z-index: 1000;
     transform: translateY(-100%);
     transition: transform 0.3s ease;
@@ -238,7 +235,7 @@ body {
     font-family: var(--font-display);
     font-size: 1.1rem;
     font-weight: 400;
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     letter-spacing: 0.05em;
 }
 
@@ -251,7 +248,7 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--primary-stone);
+    color: var(--primary-gray);
     font-weight: 300;
     font-size: 0.95rem;
     transition: color 0.3s ease;
@@ -265,12 +262,12 @@ body {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--primary-sage);
+    background: var(--primary-black);
     transition: width 0.3s ease;
 }
 
 .nav-menu a:hover {
-    color: var(--primary-sage);
+    color: var(--primary-black);
 }
 
 .nav-menu a:hover::after {
@@ -279,16 +276,16 @@ body {
 
 .nav-cta {
     background: transparent !important;
-    color: var(--accent-mountain) !important;
+    color: var(--primary-black) !important;
     padding: var(--space-xs) var(--space-md) !important;
-    border: 1px solid var(--accent-mountain) !important;
+    border: 1px solid var(--primary-black) !important;
     border-radius: 0 !important;
     transition: all 0.3s ease !important;
 }
 
 .nav-cta:hover {
-    background: var(--accent-mountain) !important;
-    color: var(--accent-mist) !important;
+    background: var(--primary-black) !important;
+    color: var(--pure-white) !important;
 }
 
 /* Section Foundation */
@@ -308,7 +305,7 @@ body {
     font-size: clamp(2rem, 5vw, 2.8rem);
     text-align: center;
     margin-bottom: var(--space-sm);
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     font-weight: 600;
     letter-spacing: -0.01em;
 }
@@ -316,7 +313,7 @@ body {
 .section-subtitle {
     text-align: center;
     font-size: 1.1rem;
-    color: var(--primary-sage);
+    color: var(--secondary-gray);
     margin-bottom: var(--space-xl);
     font-weight: 300;
     max-width: 600px;
@@ -333,30 +330,30 @@ body {
 }
 
 .model-card {
-    background: white;
+    background: var(--pure-white);
     border-radius: 0;
     padding: var(--space-lg);
-    box-shadow: var(--shadow-gentle);
+    box-shadow: var(--shadow-subtle);
     transition: all 0.4s ease;
-    border-top: 3px solid var(--primary-sky);
+    border-top: 1px solid var(--primary-black);
 }
 
 .model-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lifted);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
 }
 
 .model-icon {
     font-size: 2rem;
     margin-bottom: var(--space-md);
-    color: var(--primary-sage);
+    color: var(--primary-black);
 }
 
 .model-card h3 {
     font-family: var(--font-display);
     font-size: 1.4rem;
     margin-bottom: var(--space-md);
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     font-weight: 600;
 }
 
@@ -368,7 +365,7 @@ body {
     padding: var(--space-xs) 0;
     padding-left: var(--space-md);
     position: relative;
-    color: var(--primary-stone);
+    color: var(--primary-gray);
     font-weight: 300;
 }
 
@@ -376,29 +373,29 @@ body {
     content: '•';
     position: absolute;
     left: 0;
-    color: var(--primary-sage);
+    color: var(--light-gray);
     font-size: 1.2rem;
 }
 
 /* Financial Section - Calm and zen */
 .section-dark {
-    background: linear-gradient(135deg, var(--primary-sky) 0%, white 100%);
+    background: var(--off-white);
 }
 
 .financial-calculator {
-    background: white;
+    background: var(--pure-white);
     border-radius: 0;
     padding: var(--space-lg);
-    box-shadow: var(--shadow-gentle);
+    box-shadow: var(--shadow-subtle);
     margin-bottom: var(--space-xl);
-    border-left: 4px solid var(--primary-sage);
+    border-left: 1px solid var(--primary-black);
 }
 
 .financial-calculator h3 {
     font-family: var(--font-display);
     text-align: center;
     margin-bottom: var(--space-lg);
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     font-weight: 600;
     font-size: 1.6rem;
 }
@@ -418,15 +415,15 @@ body {
 
 .input-group label {
     font-weight: 400;
-    color: var(--primary-stone);
+    color: var(--primary-gray);
     font-size: 0.95rem;
 }
 
 .input-group input[type="range"] {
     width: 100%;
-    height: 2px;
-    background: var(--primary-sky);
-    border-radius: 1px;
+    height: 1px;
+    background: var(--lighter-gray);
+    border-radius: 0;
     outline: none;
     -webkit-appearance: none;
     transition: background 0.3s ease;
@@ -434,17 +431,17 @@ body {
 
 .input-group input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 18px;
-    height: 18px;
-    background: var(--accent-mountain);
-    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-black);
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .input-group input[type="range"]::-webkit-slider-thumb:hover {
     transform: scale(1.1);
-    background: var(--primary-sage);
+    background: var(--primary-gray);
 }
 
 .calculator-results {
@@ -454,16 +451,16 @@ body {
 }
 
 .result-card {
-    background: var(--accent-mist);
+    background: var(--off-white);
     padding: var(--space-md);
     border-radius: 0;
     text-align: center;
-    border-top: 2px solid var(--primary-sage);
+    border-top: 1px solid var(--primary-black);
 }
 
 .result-card h4 {
     font-size: 0.9rem;
-    color: var(--primary-sage);
+    color: var(--light-gray);
     margin-bottom: var(--space-xs);
     font-weight: 400;
 }
@@ -472,7 +469,7 @@ body {
     font-family: var(--font-display);
     font-size: 1.8rem;
     font-weight: 600;
-    color: var(--accent-mountain);
+    color: var(--primary-black);
 }
 
 /* Timeline - Natural flow */
@@ -489,7 +486,7 @@ body {
     top: 0;
     bottom: 0;
     width: 1px;
-    background: var(--primary-sky);
+    background: var(--lighter-gray);
 }
 
 .timeline-item {
@@ -502,8 +499,8 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--accent-mountain);
-    color: white;
+    background: var(--primary-black);
+    color: var(--pure-white);
     padding: var(--space-xs) var(--space-md);
     border-radius: 0;
     font-weight: 400;
@@ -514,10 +511,10 @@ body {
 .timeline-content {
     width: 45%;
     padding: var(--space-lg);
-    background: white;
+    background: var(--pure-white);
     border-radius: 0;
-    box-shadow: var(--shadow-gentle);
-    border-left: 3px solid var(--primary-sage);
+    box-shadow: var(--shadow-subtle);
+    border-left: 1px solid var(--primary-black);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -526,7 +523,7 @@ body {
 
 .timeline-content h3 {
     font-family: var(--font-display);
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     font-weight: 600;
     margin-bottom: var(--space-sm);
 }
@@ -534,14 +531,14 @@ body {
 .timeline-target {
     font-size: 1.1rem;
     font-weight: 500;
-    color: var(--accent-earth);
+    color: var(--secondary-gray);
     margin-bottom: var(--space-md);
 }
 
 /* Impact Section - Mountain serenity */
 .section-impact {
-    background: var(--accent-mountain);
-    color: white;
+    background: var(--primary-black);
+    color: var(--pure-white);
     position: relative;
     overflow: hidden;
 }
@@ -553,13 +550,12 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><path d="M0,100 Q300,50 600,120 T1200,80 L1200,400 L0,400 Z" fill="%237c8471" opacity="0.1"/></svg>') no-repeat top center;
-    background-size: 100% auto;
+    background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.02) 100%);
 }
 
 .section-impact .section-title,
 .section-impact .section-subtitle {
-    color: white;
+    color: var(--pure-white);
 }
 
 .impact-grid {
@@ -571,18 +567,17 @@ body {
 }
 
 .impact-card {
-    background: rgba(255, 255, 255, 0.05);
+    background: transparent;
     padding: var(--space-lg);
     border-radius: 0;
     text-align: center;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all 0.4s ease;
 }
 
 .impact-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
 }
 
 .impact-icon {
@@ -594,7 +589,7 @@ body {
     font-family: var(--font-display);
     font-size: 2rem;
     font-weight: 600;
-    color: var(--primary-sky);
+    color: var(--pure-white);
     margin: var(--space-md) 0;
 }
 
@@ -611,7 +606,7 @@ body {
     font-family: var(--font-display);
     font-size: 1.4rem;
     margin-bottom: var(--space-md);
-    color: var(--accent-mountain);
+    color: var(--primary-black);
     font-weight: 600;
 }
 
@@ -620,22 +615,22 @@ body {
     font-style: italic;
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--primary-sage);
+    color: var(--secondary-gray);
     margin-bottom: var(--space-lg);
     padding: var(--space-md);
-    border-left: 2px solid var(--primary-sky);
-    background: rgba(200, 213, 208, 0.1);
+    border-left: 1px solid var(--primary-black);
+    background: var(--off-white);
 }
 
 .contact-details p {
     margin-bottom: var(--space-sm);
-    color: var(--primary-stone);
+    color: var(--primary-gray);
     font-weight: 300;
 }
 
 .contact-info p {
     margin-bottom: var(--space-sm);
-    color: var(--primary-stone);
+    color: var(--primary-gray);
     font-weight: 300;
 }
 
@@ -650,11 +645,11 @@ body {
 .form-group textarea {
     width: 100%;
     padding: var(--space-md);
-    border: 1px solid var(--primary-sky);
+    border: 1px solid var(--lighter-gray);
     border-radius: 0;
     font-size: 1rem;
     font-family: inherit;
-    background: white;
+    background: var(--pure-white);
     transition: border-color 0.3s ease;
     font-weight: 300;
 }
@@ -663,12 +658,12 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary-sage);
+    border-color: var(--primary-black);
 }
 
 .submit-button {
-    background: var(--accent-mountain);
-    color: white;
+    background: var(--primary-black);
+    color: var(--pure-white);
     padding: var(--space-md) var(--space-lg);
     border: none;
     border-radius: 0;
@@ -680,14 +675,14 @@ body {
 }
 
 .submit-button:hover {
-    background: var(--primary-sage);
-    transform: translateY(-2px);
+    background: var(--primary-gray);
+    transform: translateY(-1px);
 }
 
 /* Footer - Minimal and clean */
 .footer {
-    background: var(--primary-stone);
-    color: var(--accent-mist);
+    background: var(--primary-black);
+    color: var(--pure-white);
     text-align: center;
     padding: var(--space-lg) 0;
     font-weight: 300;
@@ -780,6 +775,6 @@ input:focus,
 select:focus,
 textarea:focus,
 a:focus {
-    outline: 2px solid var(--primary-sage);
+    outline: 1px solid var(--primary-black);
     outline-offset: 2px;
 }
