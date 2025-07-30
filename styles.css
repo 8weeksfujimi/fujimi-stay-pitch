@@ -1,18 +1,29 @@
 /* 8weeks Fujimi Landscape - Minimalist Nature Philosophy Design */
 
 :root {
-    /* Monochrome Color Palette - Pure and Refined */
+    /* Monochrome Color Palette - Pure Black & White */
     --primary-black: #000000;
-    --primary-gray: #333333;
-    --secondary-gray: #666666;
-    --light-gray: #999999;
-    --lighter-gray: #e5e5e5;
+    --secondary-black: #1a1a1a;
+    --primary-gray: #2d2d2d;
+    --secondary-gray: #4a4a4a;
+    --tertiary-gray: #6b6b6b;
+    --light-gray: #8c8c8c;
+    --lighter-gray: #b3b3b3;
+    --accent-gray: #d4d4d4;
+    --off-white: #f5f5f5;
     --pure-white: #ffffff;
-    --off-white: #fafafa;
     
-    /* Typography */
-    --font-display: 'Crimson Text', serif;
-    --font-body: 'Noto Sans JP', sans-serif;
+    /* Typography - Modern Designer Fonts */
+    --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+    
+    /* Font Weights */
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
     
     /* Spacing - Precise proportions */
     --space-xs: 0.5rem;
@@ -22,8 +33,10 @@
     --space-xl: 8rem;
     
     /* Clean shadows */
-    --shadow-subtle: 0 2px 12px rgba(0, 0, 0, 0.05);
-    --shadow-elevated: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.12);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-elevated: 0 10px 20px rgba(0, 0, 0, 0.15);
+    --shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Reset and Foundation */
@@ -1257,13 +1270,11 @@ body {
 }
 
 /* Mission Statement */
-/* Mission Statement - Enhanced Design */
+/* Mission Statement - Monochrome Design */
 .mission-statement {
-    background: linear-gradient(135deg, 
-        rgba(93, 129, 172, 0.08) 0%, 
-        rgba(136, 176, 75, 0.08) 50%, 
-        rgba(235, 203, 139, 0.08) 100%);
-    border-radius: 24px;
+    background: var(--off-white);
+    border: 1px solid var(--lighter-gray);
+    border-radius: 0;
     padding: var(--space-xl) var(--space-lg);
     margin: var(--space-xl) 0;
     position: relative;
@@ -1276,8 +1287,8 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
-    background: linear-gradient(90deg, #5D81AC 0%, #88B04B 50%, #EBCB8B 100%);
+    height: 2px;
+    background: var(--primary-black);
 }
 
 .mission-content h3 {
@@ -1361,9 +1372,9 @@ body {
     opacity: 0.6;
 }
 
-.pillar:nth-child(1) { color: #5D81AC; }
-.pillar:nth-child(2) { color: #88B04B; }
-.pillar:nth-child(3) { color: #EBCB8B; }
+.pillar:nth-child(1) { color: var(--primary-black); }
+.pillar:nth-child(2) { color: var(--primary-black); }
+.pillar:nth-child(3) { color: var(--primary-black); }
 
 /* Icon Replacements - Clean Black Icons */
 .mission-icon,
