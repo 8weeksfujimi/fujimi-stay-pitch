@@ -213,7 +213,7 @@ body {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--lighter-gray);
-    z-index: 1000;
+    z-index: 9999;
     transform: translateY(-100%);
     transition: transform 0.3s ease;
 }
@@ -786,6 +786,8 @@ a:focus {
     background: var(--off-white);
     border-radius: 8px;
     border: 1px solid var(--lighter-gray);
+    position: relative;
+    z-index: 1;
 }
 
 .advanced-analysis h3 {
@@ -829,12 +831,16 @@ a:focus {
     overflow: hidden;
     box-shadow: var(--shadow-elevated);
     border: 1px solid var(--lighter-gray);
+    position: relative;
+    z-index: 1;
 }
 
 .streamlit-embed iframe {
     display: block;
     border: none;
     background: var(--pure-white);
+    position: relative;
+    z-index: 1;
 }
 
 .analysis-note {
