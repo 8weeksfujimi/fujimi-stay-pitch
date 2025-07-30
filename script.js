@@ -97,23 +97,23 @@ function updateCalculator() {
     propertyCountDisplay.textContent = propertyCount;
     occupancyRateDisplay.textContent = Math.round(occupancyRate * 100);
     
-    // 計算
+    // 計算（実際のモデルベース）
     const baseRevenue = 300; // 基本年間売上（万円）
-    const adjustedRevenue = baseRevenue * (occupancyRate / 0.6); // 稼働率による調整
+    const adjustedRevenue = baseRevenue * (occupancyRate / 0.33); // 稼働率33%基準で調整
     const totalRevenue = adjustedRevenue * propertyCount;
     
     // 自社所有と賃貸の比率（1:1）
     const ownedProperties = Math.floor(propertyCount / 2);
     const rentedProperties = propertyCount - ownedProperties;
     
-    // 利益計算
-    const ownedProfit = ownedProperties * 105 * (occupancyRate / 0.6); // 営業利益率35%
-    const rentedProfit = rentedProperties * 96 * (occupancyRate / 0.6); // 営業利益率32%
+    // 利益計算（実際のモデル値）
+    const ownedProfit = ownedProperties * 236 * (occupancyRate / 0.33); // NOI 236万円
+    const rentedProfit = rentedProperties * 150.6 * (occupancyRate / 0.33); // 営業利益 150.6万円
     const totalProfit = ownedProfit + rentedProfit;
     
-    // 投資額計算
-    const ownedInvestment = ownedProperties * 1500; // 1500万円/物件
-    const rentedInvestment = rentedProperties * 400; // 400万円/物件
+    // 投資額計算（実際のモデル値）
+    const ownedInvestment = ownedProperties * 1890; // 1890万円/物件
+    const rentedInvestment = rentedProperties * 550; // 550万円/物件
     const totalInvestment = ownedInvestment + rentedInvestment;
     
     // 投資回収期間
@@ -147,7 +147,7 @@ if (ctx) {
                 fill: true
             }, {
                 label: '年間営業利益（百万円）',
-                data: [10, 10, 20, 20, 30],
+                data: [19.3, 19.3, 38.7, 38.7, 58.0],
                 borderColor: '#ff6b6b',
                 backgroundColor: 'rgba(255, 107, 107, 0.1)',
                 tension: 0.4,
