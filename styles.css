@@ -846,6 +846,298 @@ body {
     }
 }
 
+/* Funding Section */
+.section-funding {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.funding-philosophy {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    padding: var(--space-lg);
+    background: var(--pure-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+}
+
+.funding-philosophy h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-md);
+}
+
+.philosophy-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--secondary-gray);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Circulation Flow */
+.circulation-model {
+    margin: var(--space-xl) 0;
+}
+
+.circulation-model h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.circulation-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.flow-step {
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: var(--space-md);
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-black);
+    color: var(--pure-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto var(--space-sm);
+}
+
+.flow-step h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-xs);
+}
+
+.flow-step p {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+    line-height: 1.5;
+}
+
+.flow-arrow {
+    font-size: 1.5rem;
+    color: var(--secondary-gray);
+    font-weight: bold;
+}
+
+/* Comparison Section */
+.comparison-section {
+    margin: var(--space-xl) 0;
+}
+
+.comparison-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.comparison-card {
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: var(--space-md);
+    box-shadow: var(--shadow-subtle);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-md);
+}
+
+.card-header h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--primary-black);
+}
+
+.badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge.recommended {
+    background: #d4edda;
+    color: #155724;
+}
+
+.badge.caution {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.advantage-item, .disadvantage-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
+    font-size: 0.9rem;
+}
+
+.advantage-icon {
+    font-size: 1.2rem;
+}
+
+.disadvantage-icon {
+    font-size: 1.2rem;
+    opacity: 0.7;
+}
+
+/* Investment Details */
+.investment-details {
+    margin: var(--space-xl) 0;
+}
+
+.investment-details h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.investment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+}
+
+.investment-card {
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: var(--space-md);
+    box-shadow: var(--shadow-subtle);
+}
+
+.investment-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-md);
+    text-align: center;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid var(--lighter-gray);
+}
+
+.spec-item:last-child {
+    border-bottom: none;
+}
+
+.spec-label {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+}
+
+.spec-value {
+    font-weight: bold;
+    color: var(--primary-black);
+}
+
+/* Funding CTA */
+.funding-cta {
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    text-align: center;
+    box-shadow: var(--shadow-elevated);
+    margin-top: var(--space-xl);
+}
+
+.funding-cta h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-sm);
+}
+
+.funding-cta p {
+    font-size: 1.1rem;
+    color: var(--secondary-gray);
+    margin-bottom: var(--space-lg);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button.primary {
+    background: var(--primary-black);
+    color: var(--pure-white);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: var(--primary-black);
+    border: 2px solid var(--primary-black);
+}
+
+.cta-button.secondary:hover {
+    background: var(--primary-black);
+    color: var(--pure-white);
+}
+
+/* Responsive Design for Funding Section */
+@media (max-width: 768px) {
+    .circulation-flow {
+        flex-direction: column;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .comparison-grid, .investment-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-button {
+        min-width: 250px;
+    }
+}
+
 /* Focus states for keyboard navigation */
 button:focus,
 input:focus,
