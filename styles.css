@@ -769,6 +769,83 @@ body {
     }
 }
 
+/* Business Model Enhancements */
+.model-subtitle {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--secondary-gray);
+    font-style: italic;
+}
+
+.business-philosophy {
+    margin-top: var(--space-lg);
+    text-align: center;
+}
+
+.business-philosophy h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-md);
+}
+
+.philosophy-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--secondary-gray);
+    margin-bottom: var(--space-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.renovation-process {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.process-step {
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.process-step h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-xs);
+}
+
+.process-step p {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+}
+
+/* Responsive adjustments for business model */
+@media (max-width: 768px) {
+    .renovation-process {
+        flex-direction: column;
+        gap: var(--space-md);
+        align-items: center;
+    }
+    
+    .process-step {
+        max-width: 250px;
+    }
+    
+    .philosophy-text {
+        font-size: 0.95rem;
+    }
+}
+
 /* Focus states for keyboard navigation */
 button:focus,
 input:focus,
