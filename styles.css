@@ -1138,6 +1138,304 @@ body {
     }
 }
 
+/* Track Record & Mission Section */
+.section-mission {
+    background: var(--pure-white);
+    padding: var(--space-xl) 0;
+}
+
+.track-record-intro {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+/* Current Properties */
+.current-properties h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.property-card {
+    background: var(--pure-white);
+    border-radius: 12px;
+    box-shadow: var(--shadow-subtle);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+}
+
+.property-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.property-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.property-info {
+    padding: var(--space-md);
+}
+
+.property-info h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-sm);
+}
+
+.property-description {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+    line-height: 1.6;
+    margin-bottom: var(--space-md);
+}
+
+.property-stats {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.stat-item {
+    background: var(--off-white);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--primary-gray);
+    font-weight: 500;
+}
+
+/* Performance Summary */
+.performance-summary {
+    background: var(--off-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-lg);
+    text-align: center;
+}
+
+.summary-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.summary-stat .stat-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-black);
+    margin-bottom: var(--space-xs);
+}
+
+.summary-stat .stat-label {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+}
+
+/* Mission Statement */
+.mission-statement {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 16px;
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+.mission-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.mission-core {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--primary-gray);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mission-pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-lg);
+}
+
+.pillar {
+    background: var(--pure-white);
+    border-radius: 12px;
+    padding: var(--space-md);
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
+}
+
+.pillar-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.pillar h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    color: var(--primary-black);
+    margin-bottom: var(--space-sm);
+}
+
+.pillar p {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+    line-height: 1.6;
+}
+
+/* Business Vision */
+.business-vision {
+    margin-top: var(--space-xl);
+}
+
+.business-vision h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.vision-description {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--primary-gray);
+    text-align: center;
+    margin-bottom: var(--space-lg);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.transformation-flow {
+    background: var(--off-white);
+    border-radius: 12px;
+    padding: var(--space-lg);
+}
+
+.transformation-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.step-before, .step-after {
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+}
+
+.step-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--secondary-gray);
+    margin-bottom: var(--space-xs);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: var(--space-sm);
+}
+
+.step-arrow {
+    font-size: 2rem;
+    color: var(--secondary-gray);
+    font-weight: bold;
+}
+
+.impact-result {
+    margin-top: var(--space-lg);
+}
+
+.impact-result h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--primary-black);
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.impact-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--space-sm);
+}
+
+.impact-item {
+    background: var(--pure-white);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--primary-gray);
+    text-align: center;
+    box-shadow: var(--shadow-subtle);
+}
+
+/* Responsive Design for Mission Section */
+@media (max-width: 768px) {
+    .properties-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-md);
+    }
+    
+    .mission-pillars {
+        grid-template-columns: 1fr;
+    }
+    
+    .transformation-step {
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+    
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .impact-items {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Focus states for keyboard navigation */
 button:focus,
 input:focus,
