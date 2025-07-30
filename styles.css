@@ -1376,26 +1376,47 @@ body {
 .pillar:nth-child(2) { color: var(--primary-black); }
 .pillar:nth-child(3) { color: var(--primary-black); }
 
-/* Icon Replacements - Clean Black Icons */
-.mission-icon,
-.vision-icon,
-.impact-icon,
-.pillar-icon,
-.step-icon,
-.model-icon,
-.process-icon {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    background-color: var(--primary-black);
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    margin-bottom: var(--space-md);
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
+/* Untitled UI Icon Styles */
+.untitled-ui-icon {
+    font-size: 24px;
+    color: var(--primary-black);
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+h3 .untitled-ui-icon,
+h4 .untitled-ui-icon {
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.pillar-icon .untitled-ui-icon,
+.step-icon .untitled-ui-icon,
+.model-icon .untitled-ui-icon,
+.impact-icon .untitled-ui-icon {
+    font-size: 48px;
+    display: block;
+    margin: 0 auto var(--space-md);
+}
+
+.feature-item .untitled-ui-icon {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.advantage-item .untitled-ui-icon,
+.disadvantage-item .untitled-ui-icon {
+    font-size: 18px;
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+.advantage-item .untitled-ui-icon {
+    color: var(--primary-black);
+}
+
+.disadvantage-item .untitled-ui-icon {
+    color: var(--tertiary-gray);
 }
 
 /* Mission Section Icons */
