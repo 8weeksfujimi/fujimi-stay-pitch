@@ -1,53 +1,103 @@
-# 富士見町宿泊事業ピッチサイト
+# 🏔️ 8weeks Fujimi Landscape - 事業分析ツール
 
-投資家向けプレゼンテーション用のインタラクティブWebサイトです。
+富士見町宿泊事業の包括的な事業分析・投資シミュレーションツールです。
 
-## 特徴
+## 🌟 主要機能
 
-- 📊 **インタラクティブな投資シミュレーター**: 物件数と稼働率を調整して収益予測を確認
-- 📈 **成長チャート**: 5年間の売上・利益予測をビジュアル表示
-- 📱 **レスポンシブデザイン**: PC・タブレット・スマートフォンに対応
-- ⚡ **高速表示**: 最適化されたコードで快適な閲覧体験
+### 📊 インタラクティブ事業分析アプリ（Streamlit）
+- **感応度分析**: 稼働率・客単価・物件数の変化による影響をリアルタイム分析
+- **シナリオ比較**: 楽観・基本・悲観・最悪シナリオの詳細比較
+- **リスクファクター分析**: 売上・費用面の主要リスクと影響度の定量化
+- **損益分岐点分析**: 現金ベースでの損益分岐稼働率と安全余裕の算出
+- **詳細財務データ**: 自社所有・賃貸物件別の詳細収益構造
+- **計算前提ドキュメント**: 全ての計算ロジックと前提条件の透明化
 
-## 技術構成
+### 🎨 投資家向けピッチサイト（HTML）
+- **レスポンシブデザイン**: PC・タブレット・スマートフォン対応
+- **インタラクティブシミュレーター**: 基本的な収益計算
+- **ビジュアル表現**: Chart.jsによるデータビジュアライゼーション
 
-- **HTML5**: セマンティックなマークアップ
-- **CSS3**: モダンなデザインとアニメーション
-- **JavaScript**: インタラクティブ機能とChart.js
+## 🛠️ 技術構成
+
+### Streamlitアプリ
+- **Python 3.8+**: メインプログラミング言語
+- **Streamlit**: Webアプリケーションフレームワーク
+- **Plotly**: インタラクティブグラフ
+- **Pandas/NumPy**: データ分析・計算処理
+
+### ピッチサイト
+- **HTML5**: セマンティックマークアップ
+- **CSS3**: モダンデザイン・アニメーション
+- **JavaScript**: インタラクティブ機能
 - **Chart.js**: データビジュアライゼーション
 
-## デプロイ方法
+## 🚀 デプロイ方法
 
-### Netlifyを使用する場合
+### 📊 Streamlitアプリのデプロイ（推奨）
 
-1. [Netlify](https://netlify.com)のアカウントを作成
-2. 「New site from Git」または「Deploy manually」を選択
-3. このフォルダをドラッグ&ドロップまたはZIPでアップロード
-4. 自動的にデプロイが開始されます
+#### Streamlit Cloudを使用
+1. [Streamlit Cloud](https://streamlit.io/cloud)でアカウント作成
+2. GitHubリポジトリを連携
+3. `streamlit_app.py`をメインファイルに指定
+4. 自動デプロイ開始
 
-### Vercelを使用する場合
+#### その他のプラットフォーム
+- **Heroku**: `Procfile`を追加し、`web: streamlit run streamlit_app.py --server.port=$PORT`
+- **Railway**: Gitリポジトリを連携し、自動検出
+- **Render**: Webサービスとして`streamlit run streamlit_app.py`を指定
 
-1. [Vercel](https://vercel.com)のアカウントを作成
-2. Vercel CLIをインストール: `npm i -g vercel`
-3. このディレクトリで `vercel` コマンドを実行
-4. プロンプトに従ってデプロイ
+### 🎨 ピッチサイト（HTML）のデプロイ
 
-### GitHubを使用する場合
+#### Netlifyを使用
+1. [Netlify](https://netlify.com)でアカウント作成
+2. フォルダをドラッグ&ドロップでアップロード
+3. `index.html`が自動的にメインページに設定
 
-1. GitHubにリポジトリを作成
-2. このフォルダの内容をpush
-3. NetlifyまたはVercelでGitHubリポジトリを連携
-4. 自動デプロイが設定されます
+#### Vercelを使用
+1. [Vercel](https://vercel.com)でアカウント作成
+2. GitHubリポジトリを連携
+3. 自動ビルド・デプロイ
 
-## ファイル構成
+### 🔗 GitHub連携の手順
+
+```bash
+# 1. Gitリポジトリの初期化
+git init
+
+# 2. ファイルの追加
+git add .
+
+# 3. 初回コミット
+git commit -m "Initial commit: 8weeks Fujimi Landscape事業分析ツール"
+
+# 4. リモートリポジトリの追加
+git remote add origin https://github.com/[username]/fujimi-business-analysis.git
+
+# 5. プッシュ
+git push -u origin main
+```
+
+## 📁 ファイル構成
 
 ```
-├── index.html          # メインページ
-├── styles.css          # スタイルシート
-├── script.js           # JavaScript機能
-├── netlify.toml        # Netlify設定
-└── README.md           # このファイル
+├── streamlit_app.py              # Streamlitメインアプリ
+├── fujimi_business_model.py      # 事業モデル計算クラス
+├── requirements.txt              # Python依存関係
+├── .streamlit/
+│   └── config.toml              # Streamlit設定
+├── index.html                   # HTMLピッチサイト
+├── styles.css                   # CSSスタイル
+├── script.js                    # JavaScript機能
+├── netlify.toml                 # Netlify設定
+└── README.md                    # このファイル
 ```
+
+### 🔧 主要ファイルの説明
+
+- **`streamlit_app.py`**: メインのStreamlitアプリケーション
+- **`fujimi_business_model.py`**: 事業分析の計算ロジック
+- **`requirements.txt`**: デプロイ時の依存関係管理
+- **`.streamlit/config.toml`**: アプリの外観・動作設定
 
 ## カスタマイズ
 
