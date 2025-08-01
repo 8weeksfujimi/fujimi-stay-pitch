@@ -1,4 +1,4 @@
-/* 8weeks Fujimi Landscape - Minimalist Nature Philosophy Design */
+/* 8weeks Fujimi Landscape - Photo-Centric Design with Host Profile */
 
 :root {
     /* Monochrome Color Palette - Pure Black & White */
@@ -1976,5 +1976,315 @@ a:focus {
     
     .analysis-description {
         font-size: 0.9rem;
+    }
+}
+
+/* ======================================
+   GALLERY SECTION - Pinterest風Masonry
+   ====================================== */
+
+.section-gallery {
+    background: var(--off-white);
+    padding: var(--space-xl) 0;
+}
+
+/* Gallery Filters */
+.gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--pure-white);
+    border: 2px solid var(--accent-gray);
+    color: var(--primary-gray);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: var(--font-medium);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-gray);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.filter-btn.active {
+    background: var(--primary-black);
+    color: var(--pure-white);
+    border-color: var(--primary-black);
+}
+
+/* Masonry Grid */
+.masonry-gallery {
+    column-count: 3;
+    column-gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+
+.masonry-item.featured {
+    page-break-inside: avoid;
+}
+
+/* Card Styling */
+.masonry-card {
+    background: var(--pure-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-subtle);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.masonry-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-elevated);
+}
+
+/* Card Images */
+.card-image {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--accent-gray) 100%);
+}
+
+.image-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    min-height: 200px;
+}
+
+.masonry-item.tall .image-placeholder {
+    min-height: 300px;
+}
+
+.masonry-item.medium .image-placeholder {
+    min-height: 250px;
+}
+
+.feature-icon {
+    width: 48px;
+    height: 48px;
+    color: var(--tertiary-gray);
+    margin-bottom: 1rem;
+}
+
+/* Video Placeholder */
+.video-placeholder {
+    background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-black) 100%);
+    position: relative;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.play-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--pure-white);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.masonry-card:hover .play-icon {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.video-badge {
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--primary-black);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: var(--font-medium);
+}
+
+/* Card Overlays */
+.card-overlay {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.overlay-badge {
+    background: var(--primary-black);
+    color: var(--pure-white);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: var(--font-medium);
+}
+
+/* Card Content */
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: var(--font-semibold);
+    color: var(--primary-black);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.card-content p {
+    color: var(--tertiary-gray);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Card Tags */
+.card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: var(--off-white);
+    color: var(--secondary-gray);
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: var(--font-medium);
+}
+
+/* Card Stats */
+.card-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--secondary-gray);
+    font-size: 0.8rem;
+    font-weight: var(--font-medium);
+}
+
+.icon-tiny {
+    width: 14px;
+    height: 14px;
+}
+
+/* Load More Button */
+.gallery-load-more {
+    text-align: center;
+    margin-top: var(--space-lg);
+}
+
+.load-more-btn {
+    background: var(--pure-white);
+    border: 2px solid var(--primary-black);
+    color: var(--primary-black);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.load-more-btn:hover {
+    background: var(--primary-black);
+    color: var(--pure-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Icon sizes */
+.icon-small {
+    width: 18px;
+    height: 18px;
+}
+
+/* Responsive Design for Gallery */
+@media (max-width: 768px) {
+    .masonry-gallery {
+        column-count: 2;
+        column-gap: 1rem;
+    }
+    
+    .masonry-item {
+        margin-bottom: 1rem;
+    }
+    
+    .gallery-filters {
+        gap: 0.5rem;
+    }
+    
+    .filter-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .card-content {
+        padding: 1.2rem;
+    }
+    
+    .image-placeholder {
+        padding: 2rem 1.5rem;
+        min-height: 150px;
+    }
+    
+    .masonry-item.tall .image-placeholder,
+    .masonry-item.medium .image-placeholder {
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .masonry-gallery {
+        column-count: 1;
+    }
+    
+    .gallery-filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-stats {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }

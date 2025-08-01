@@ -203,3 +203,135 @@ window.addEventListener('scroll', () => {
         hero.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
 });
+
+// ===============================
+// ギャラリーフィルター機能
+// ===============================
+
+document.addEventListener('DOMContentLoaded', function() {
+    initGalleryFilter();
+});
+
+function initGalleryFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.masonry-item');
+    const loadMoreBtn = document.querySelector('.load-more-btn');
+
+    // フィルターボタンのイベントリスナー
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // アクティブ状態の更新
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // フィルター実行
+            const filterValue = this.getAttribute('data-filter');
+            filterGalleryItems(filterValue, galleryItems);
+        });
+    });
+
+    // もっと見るボタンの機能
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            // 隠れている要素を表示（簡単な実装）
+            const hiddenItems = document.querySelectorAll('.masonry-item[style*="display: none"]');
+            const showCount = 6; // さらに表示する数
+
+            for (let i = 0; i < Math.min(showCount, hiddenItems.length); i++) {
+                hiddenItems[i].style.display = 'inline-block';
+                // フェードインアニメーション
+                setTimeout(() => {
+                    hiddenItems[i].style.opacity = '1';
+                    hiddenItems[i].style.transform = 'translateY(0)';
+                }, i * 100);
+            }
+
+            // すべて表示されたらボタンを非表示
+            if (hiddenItems.length <= showCount) {
+                this.style.display = 'none';
+            }
+        });
+    }
+
+    // カードホバー効果
+    const masonryCards = document.querySelectorAll('.masonry-card');
+    masonryCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-8px) scale(1.02)';
+        });
+
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
+
+        // カードクリック時のモーダル表示（将来実装）
+        card.addEventListener('click', function() {
+            // console.log('Card clicked:', this);
+            // ここにモーダル表示のロジックを追加可能
+        });
+    });
+}
+
+function filterGalleryItems(filter, items) {
+    items.forEach(item => {
+        const category = item.getAttribute('data-category');
+        const shouldShow = filter === 'all' || category === filter;
+
+        if (shouldShow) {
+            // 表示アニメーション
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.display = 'inline-block';
+            
+            // アニメーション付きで表示
+            requestAnimationFrame(() => {
+                item.style.transition = 'all 0.4s ease';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            });
+        } else {
+            // 非表示アニメーション
+            item.style.transition = 'all 0.3s ease';
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(-20px)';
+            
+            // アニメーション完了後に非表示
+            setTimeout(() => {
+                item.style.display = 'none';
+            }, 300);
+        }
+    });
+
+    // マソンリーレイアウトの再計算
+    requestAnimationFrame(() => {
+        adjustMasonryLayout();
+    });
+}
+
+function adjustMasonryLayout() {
+    // CSS Column対応ブラウザでは自動調整されるため、
+    // 古いブラウザ用のフォールバック処理のみ
+    const gallery = document.querySelector('.masonry-gallery');
+    if (gallery && !CSS.supports('column-count', '3')) {
+        // Fallback: Flexbox等を使った手動レイアウト調整
+        console.log('Fallback layout adjustment');
+    }
+}
+
+// レスポンシブ対応：ウィンドウリサイズ時の調整
+window.addEventListener('resize', debounce(() => {
+    adjustMasonryLayout();
+}, 250));
+
+// デバウンス関数
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}

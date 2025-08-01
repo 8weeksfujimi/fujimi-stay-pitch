@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>8weeks Fujimi Landscape - 自然と共生する滞在体験</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="host-gallery-styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -45,6 +46,8 @@
         <div class="nav-container">
             <div class="nav-logo">8weeks Fujimi Landscape</div>
             <ul class="nav-menu">
+                <li><a href="#host-intro">ホスト紹介</a></li>
+                <li><a href="#gallery">施設ギャラリー</a></li>
                 <li><a href="#business-model">事業モデル</a></li>
                 <li><a href="#funding">資金調達</a></li>
                 <li><a href="#financial">収支計画</a></li>
@@ -54,6 +57,254 @@
             </ul>
         </div>
     </nav>
+
+    <!-- ホスト紹介セクション -->
+    <section id="host-intro" class="section section-host">
+        <div class="container">
+            <h2 class="section-title">ホストのご紹介</h2>
+            <div class="host-profile">
+                <div class="host-image">
+                    <div class="host-photo-placeholder">
+                        <i data-lucide="user" style="width: 60px; height: 60px; color: #ccc;"></i>
+                        <p style="color: #999; font-size: 0.8rem; margin-top: 10px;">Reiさんの写真</p>
+                    </div>
+                    <div class="host-badge">
+                        <i data-lucide="star" class="icon-small"></i>
+                        <span>スーパーホスト</span>
+                    </div>
+                </div>
+                <div class="host-info">
+                    <h3>Rei</h3>
+                    <div class="host-stats">
+                        <div class="stat-item">
+                            <i data-lucide="star" class="icon-inline"></i>
+                            <span class="stat-number">4.99</span>
+                            <span class="stat-label">評価</span>
+                        </div>
+                        <div class="stat-item">
+                            <i data-lucide="message-circle" class="icon-inline"></i>
+                            <span class="stat-number">108</span>
+                            <span class="stat-label">件のレビュー</span>
+                        </div>
+                        <div class="stat-item">
+                            <i data-lucide="calendar" class="icon-inline"></i>
+                            <span class="stat-number">2</span>
+                            <span class="stat-label">年のホスティング歴</span>
+                        </div>
+                    </div>
+                    <div class="host-story">
+                        <p class="host-intro-text">
+                            <strong>80年代生まれ、6歳の女の子の母</strong><br>
+                            2020年8月に神奈川県から富士見町へ移住しました。信州の豊かな自然の中で、6歳の女の子を子育てしながら、8weeks Fujimiの運営をしています。
+                        </p>
+                        <p class="host-detail">
+                            夫がロンドンに単身赴任中、娘と先に富士見へやってきたので、八ヶ岳エリアのおすすめスポットはもちろんのこと、<strong>地方移住や子育て</strong>などについても、お役に立てることがあれば気兼ねなくお尋ね下さい。
+                        </p>
+                        <div class="superhost-info">
+                            <i data-lucide="award" class="icon-inline"></i>
+                            <span><strong>スーパーホスト</strong>とは、ゲストに素敵な滞在を提供して高い評価を受けている経験豊富なホストです。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 施設フォトギャラリー - Pinterest風 -->
+    <section id="gallery" class="section section-gallery">
+        <div class="container">
+            <h2 class="section-title">施設ギャラリー</h2>
+            <p class="section-subtitle">8weeks Fujimiでの特別な時間を写真でご紹介</p>
+            
+            <!-- フィルターボタン -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">すべて</button>
+                <button class="filter-btn" data-filter="exterior">外観・環境</button>
+                <button class="filter-btn" data-filter="interior">室内空間</button>
+                <button class="filter-btn" data-filter="view">景色・体験</button>
+                <button class="filter-btn" data-filter="amenity">設備・アメニティ</button>
+            </div>
+
+            <!-- Pinterest風マソンリーグリッド -->
+            <div class="masonry-gallery" id="masonry-gallery">
+                <!-- メイン動画カード -->
+                <div class="masonry-item featured video-item" data-category="view">
+                    <div class="masonry-card">
+                        <div class="card-image video-placeholder">
+                            <i data-lucide="play-circle" class="play-icon"></i>
+                            <div class="video-overlay">
+                                <span class="video-badge">バーチャルツアー</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>8weeks Fujimi 完全案内</h4>
+                            <p>静寂に包まれた森の中の特別な空間を動画でご体感ください</p>
+                            <div class="card-tags">
+                                <span class="tag">360°ツアー</span>
+                                <span class="tag">4K映像</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 施設画像カード群 -->
+                <div class="masonry-item tall" data-category="interior">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="music" class="feature-icon"></i>
+                            </div>
+                            <div class="card-overlay">
+                                <span class="overlay-badge">Featured</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>グランドピアノのあるリビング</h4>
+                            <p>森の静寂の中で響く音色。心に残る特別な時間を演出する、こだわりの楽器空間</p>
+                            <div class="card-stats">
+                                <span class="stat-item"><i data-lucide="users" class="icon-tiny"></i> 6名まで</span>
+                                <span class="stat-item"><i data-lucide="music" class="icon-tiny"></i> Steinway</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="exterior">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="home" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>森に佇む外観</h4>
+                            <p>八ヶ岳山麓の豊かな緑に囲まれた、隠れ家のような佇まい</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item medium" data-category="interior">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="sun" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>陽だまりのリビング</h4>
+                            <p>大きな窓から差し込む自然光が、ゆったりとした時間を演出</p>
+                            <div class="card-tags">
+                                <span class="tag">南向き</span>
+                                <span class="tag">床暖房</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="exterior">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="flower" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>季節を感じるテラス</h4>
+                            <p>四季の移ろいを間近に感じる、プライベートなアウトドア空間</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item tall" data-category="view">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="mountain" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>八ヶ岳の絶景パノラマ</h4>
+                            <p>朝焼けに染まる雄大な山々。毎日違う表情を見せる自然のアートギャラリー</p>
+                            <div class="card-stats">
+                                <span class="stat-item"><i data-lucide="sunrise" class="icon-tiny"></i> 日の出</span>
+                                <span class="stat-item"><i data-lucide="sunset" class="icon-tiny"></i> 夕景</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="interior">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="moon" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>静寂に包まれた寝室</h4>
+                            <p>森の静けさに包まれて、深い眠りをお約束する癒しの空間</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item medium" data-category="amenity">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="coffee" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>こだわりのキッチン</h4>
+                            <p>地元食材を使った料理作りも楽しめる、設備充実のキッチンスペース</p>
+                            <div class="card-tags">
+                                <span class="tag">IH対応</span>
+                                <span class="tag">食器洗機</span>
+                                <span class="tag">調理器具完備</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item" data-category="view">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="trees" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>森林浴の小径</h4>
+                            <p>敷地内の散歩道で楽しむ、贅沢なプライベート森林浴</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="masonry-item medium" data-category="amenity">
+                    <div class="masonry-card">
+                        <div class="card-image">
+                            <div class="image-placeholder">
+                                <i data-lucide="wifi" class="feature-icon"></i>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <h4>快適なワークスペース</h4>
+                            <p>自然の中でのリモートワークも可能な、高速Wi-Fi完備の環境</p>
+                            <div class="card-stats">
+                                <span class="stat-item"><i data-lucide="zap" class="icon-tiny"></i> 光回線</span>
+                                <span class="stat-item"><i data-lucide="monitor" class="icon-tiny"></i> 大型モニター</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- もっと見るボタン -->
+            <div class="gallery-load-more">
+                <button class="load-more-btn">さらに写真を見る <i data-lucide="chevron-down" class="icon-small"></i></button>
+            </div>
+        </div>
+    </section>
 
     <!-- 実績とミッション セクション -->
     <section id="track-record" class="section section-mission">
@@ -70,21 +321,27 @@
                 <div class="properties-grid">
                     <div class="property-card" data-aos="fade-up">
                         <div class="property-image">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23d4e6f1' width='400' height='300'/%3E%3Ctext x='50%25' y='45%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='18' font-weight='bold' fill='%23154360'%3E8weeks Fujimi%3C/text%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='12' fill='%231b4f72'%3Eグランドピアノのある森の別荘%3C/text%3E%3C/svg%3E" alt="8weeks Fujimi">
+                            <div class="property-placeholder">
+                                <i data-lucide="music" style="width: 40px; height: 40px; color: #666;"></i>
+                                <p style="color: #999; font-size: 0.9rem; margin-top: 10px;">8weeks Fujimi</p>
+                            </div>
                         </div>
                         <div class="property-info">
                             <h4>8weeks Fujimi</h4>
                             <p class="property-description">グランドピアノのある森の中の一棟貸切別荘。標高1000mの八ヶ岳山麓で特別な時間を</p>
                             <div class="property-stats">
                                 <span class="stat-item">定員 6名</span>
-                                <span class="stat-item">評価 4.98/5</span>
+                                <span class="stat-item">評価 4.99/5</span>
                             </div>
                         </div>
                     </div>
                     
                     <div class="property-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="property-image">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23d5f4e6' width='400' height='300'/%3E%3Ctext x='50%25' y='45%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='18' font-weight='bold' fill='%23196f3d'%3E8weeks Quriu%3C/text%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='12' fill='%23239b56'%3E100m²超のフロア貸切%3C/text%3E%3C/svg%3E" alt="8weeks Quriu">
+                            <div class="property-placeholder">
+                                <i data-lucide="maximize" style="width: 40px; height: 40px; color: #666;"></i>
+                                <p style="color: #999; font-size: 0.9rem; margin-top: 10px;">8weeks Quriu</p>
+                            </div>
                         </div>
                         <div class="property-info">
                             <h4>8weeks Quriu</h4>
@@ -98,7 +355,10 @@
                     
                     <div class="property-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="property-image">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%23fdeaa7' width='400' height='300'/%3E%3Ctext x='50%25' y='45%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='18' font-weight='bold' fill='%23b7950b'%3E8weeks Studio%3C/text%3E%3Ctext x='50%25' y='60%25' text-anchor='middle' dy='.3em' font-family='Arial' font-size='12' fill='%23d68910'%3E商店街リノベーションフラット%3C/text%3E%3C/svg%3E" alt="8weeks Studio">
+                            <div class="property-placeholder">
+                                <i data-lucide="shopping-bag" style="width: 40px; height: 40px; color: #666;"></i>
+                                <p style="color: #999; font-size: 0.9rem; margin-top: 10px;">8weeks Studio</p>
+                            </div>
                         </div>
                         <div class="property-info">
                             <h4>8weeks Studio</h4>
